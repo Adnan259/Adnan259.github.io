@@ -167,6 +167,8 @@
   .pdesc code{font-family:'IBM Plex Mono',monospace;font-size:.82em;color:var(--gold-lt)}
   .plink{display:inline-flex;align-items:center;gap:.4rem;margin-top:1.1rem;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.1em;color:var(--gold);text-decoration:none;transition:gap .2s}
   .plink:hover{gap:.7rem}
+  .pnote{margin-top:1.1rem;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.08em;color:var(--text-dim);display:inline-flex;align-items:center;gap:.5rem}
+  .pnote::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--text-dim);opacity:.6}
 
   /* ---------- certifications ---------- */
   .cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.4rem}
@@ -274,8 +276,8 @@
       <div class="about-stats">
         <div class="scard reveal rd1"><div class="snum" data-count="3.77" data-dec="2">0</div><div class="slbl2">CGPA / 4.00</div></div>
         <div class="scard reveal rd2"><div class="snum" data-count="6">0</div><div class="slbl2">Bus Protocols</div></div>
-        <div class="scard reveal rd3"><div class="snum" data-count="3">0</div><div class="slbl2">RTL Projects</div></div>
-        <div class="scard reveal rd4"><div class="snum" data-count="9">0</div><div class="slbl2">RTL Bugs Fixed</div></div>
+        <div class="scard reveal rd3"><div class="snum" data-count="4">0</div><div class="slbl2">RTL Projects</div></div>
+        <div class="scard reveal rd4"><div class="snum">SV</div><div class="slbl2">SystemVerilog</div></div>
       </div>
     </div>
   </div>
@@ -376,25 +378,32 @@
     <div class="divider reveal rd1"></div>
     <div class="proj-grid">
       <div class="pcard reveal rd1">
-        <p class="pnum">PROJECT 01 · INTERNSHIP</p>
+        <p class="pnum">PROJECT 01 · ADN TRAINEE PROJECT</p>
+        <p class="ptitle">DDR2 SDRAM Controller</p>
+        <p class="pdesc">Designed a parameterized DDR2 SDRAM controller in SystemVerilog targeting a Micron device, with multi-bank scheduling, refresh handling, full power-up initialization, and runtime mode-register reconfiguration. Verified against the vendor behavioral model using self-checking testbenches in Vivado/xsim.</p>
+        <div class="tags"><span class="tag">SystemVerilog</span><span class="tag">DDR2 SDRAM</span><span class="tag">Bank Scheduling</span><span class="tag">Self-checking TB</span><span class="tag">Vivado/xsim</span></div>
+        <p class="pnote">Company IP — source not public</p>
+      </div>
+      <div class="pcard reveal rd2">
+        <p class="pnum">PROJECT 02 · ADN INTERNSHIP PROJECT</p>
         <p class="ptitle">SC-SoC Peripheral Verification — RV32IMF RISC-V SoC</p>
         <p class="pdesc">Designed and verified peripheral blocks for a single-core RISC-V SoC — clock control, UART, and AXI4-Lite FIFO modules in SystemVerilog. Built unit-level testbenches covering transmission, back-pressure, and parity scenarios, and fixed multiple real RTL bugs through waveform-driven debugging.</p>
         <div class="tags"><span class="tag">SystemVerilog</span><span class="tag">RV32IMF</span><span class="tag">AXI4-Lite</span><span class="tag">APB</span><span class="tag">Vivado</span></div>
-        <a class="plink" href="https://github.com/Adnan259" target="_blank" rel="noopener">View on GitHub →</a>
-      </div>
-      <div class="pcard reveal rd2">
-        <p class="pnum">PROJECT 02 · PERSONAL</p>
-        <p class="ptitle">8-bit ALU Design &amp; UVM-style Verification</p>
-        <p class="pdesc">Designed an 8-bit ALU with arithmetic, logic, and shift operations plus full status flags. Verified it with a complete object-oriented, UVM-style testbench — generator, driver, monitor, and scoreboard — checking every operation against a reference model.</p>
-        <div class="tags"><span class="tag">SystemVerilog</span><span class="tag">UVM-style</span><span class="tag">OOP Testbench</span><span class="tag">Scoreboard</span></div>
-        <a class="plink" href="https://github.com/Adnan259" target="_blank" rel="noopener">View on GitHub →</a>
+        <a class="plink" href="https://github.com/ADN-VLSI/SC-SoC" target="_blank" rel="noopener">View on GitHub →</a>
       </div>
       <div class="pcard reveal rd3">
         <p class="pnum">PROJECT 03 · PERSONAL</p>
+        <p class="ptitle">8-bit ALU Design &amp; UVM-style Verification</p>
+        <p class="pdesc">Designed an 8-bit ALU with arithmetic, logic, and shift operations plus full status flags. Verified it with a complete object-oriented, UVM-style testbench — generator, driver, monitor, and scoreboard — checking every operation against a reference model.</p>
+        <div class="tags"><span class="tag">SystemVerilog</span><span class="tag">UVM-style</span><span class="tag">OOP Testbench</span><span class="tag">Scoreboard</span></div>
+        <a class="plink" href="https://github.com/Adnan259/SV-ALU-DV-Environment" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+      <div class="pcard reveal rd1">
+        <p class="pnum">PROJECT 04 · PERSONAL</p>
         <p class="ptitle">WISHBONE Memory Interface Design &amp; Verification</p>
         <p class="pdesc">Built a WISHBONE B.3-compliant memory slave IP with configurable depth and byte-lane write strobes. Developed a mailbox-driven verification environment covering read, write, and partial-strobe cases — and caught a real RTL bug in the FIFO logic through systematic testbench-driven debugging.</p>
         <div class="tags"><span class="tag">SystemVerilog</span><span class="tag">WISHBONE B.3</span><span class="tag">VIP</span><span class="tag">Mailbox TB</span></div>
-        <a class="plink" href="https://github.com/Adnan259" target="_blank" rel="noopener">View on GitHub →</a>
+        <a class="plink" href="https://github.com/Adnan259/WISHBONE-MEMORY" target="_blank" rel="noopener">View on GitHub →</a>
       </div>
     </div>
   </div>
