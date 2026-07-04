@@ -486,7 +486,7 @@ ham.addEventListener('click',()=>{ham.classList.toggle('open');mob.classList.tog
 mob.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{ham.classList.remove('open');mob.classList.remove('show');}));
 
 /* ---------- typing effect ---------- */
-const roles=["RTL Design & Verification Engineer","SystemVerilog Developer","RISC-V SoC Verification","UVM-style Testbench Builder"];
+const roles=["RTL Design & Verification Engineer","SystemVerilog Developer","RISC-V SoC Design & Verification","UVM-style Testbench Builder"];
 const typed=document.getElementById('typed');
 const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 if(reduceMotion){typed.textContent=roles[0];}
